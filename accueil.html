@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maman Recette</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #ffcc00;
+            padding: 20px;
+            text-align: center;
+			   position: relative; 
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        .hero {
+            text-align: center;
+            margin: 20px 0;
+        }
+		.hero h2 {
+
+            font-family: 'Roboto', sans-serif; 
+
+            font-weight: 700; 
+
+            font-size: 36px; 
+            margin: 20px 0; 
+
+        }
+
+        .recettes-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        article {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            width: 30%;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+
+        .btn {
+            background-color: #ffcc00;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #e6b800;
+        }
+
+        .logo {
+		    position: absolute; 
+            top: 10px; 
+            left: 1px; 
+            width: 300px; 
+            height: 140px; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+	<a href="accueil.html"> 
+
+         <img src="MAMILLE.png.png" class="logo">
+        </a>
+ 
+        <h1>Maman Recette</h1>
+        <nav>
+            <ul>
+                <li><a href="recettes.html">Recettes</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <img src="image-couverture.jpg" alt="Maman Recette" />
+            <h2>Bienvenue dans le monde des saveurs!</h2>
+            <button class="btn" onclick="showAlert()">Cliquez ici pour une surprise!</button>
+        </section>
+        
+        <section id="recettes">
+            <h3>Recettes Populaires</h3>
+            <div class="recettes-list">
+                <article>
+                    <h4>Recette 1</h4>
+                    <img src="recette1.jpg" alt="Recette 1" />
+                    <p>Description de la recette 1.</p>
+                </article>
+                <article>
+                    <h4>Recette 2</h4>
+                    <img src="recette2.jpg" alt="Recette 2" />
+                    <p>Description de la recette 2.</p>
+                </article>
+                
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Maman Recette. Tous droits réservés.</p>
+        <p>Suivez-nous sur 
+            <a href="https://facebook.com" style="color: #ffcc00;">Facebook</a>, 
+            <a href="https://instagram.com" style="color: #ffcc00;">Instagram</a>
+        </p>
+    </footer>
+
+    <script>
+        function showAlert() {
+            alert("Merci de visiter Maman Recette! Profitez de nos délicieuses recettes!");
+        }
+    </script>
+</body>
+</html>

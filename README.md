@@ -49,7 +49,7 @@ Each recipe has a dedicated page with:
 
 1. **Clone the Repository**
    ```
-   git clone https://github.com/EmyCherif/RECIPES.git
+   git clone https://github.com/EmyCherifB21/RECIPES.git
    ```
 
 2. **Open the Project**
@@ -58,16 +58,6 @@ Each recipe has a dedicated page with:
 3. **Use Trello** (if applicable)
    Our team tracks tasks and progress using Trello. Check our Trello board for current and future tasks.
 
-## Features
-- Responsive, modern design
-- Separate category pages for sweet and savory recipes
-- Detailed recipe pages with easy-to-read instructions
-- Footer with navigation links and social media contacts
-- User-friendly navigation across all pages
 
-## Contributing
-If you'd like to contribute, please submit a pull request with your improvements. All contributions are welcome, especially those that enhance the design, functionality, or usability of the site.
 
----
 
-Feel free to adjust or add more sections if needed for your project requirements!

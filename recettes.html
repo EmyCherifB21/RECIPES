@@ -1,90 +1,144 @@
+<!-- recettes.html -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recettes - Maman Recette</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
-
-        header {
-            background-color: #ffcc00;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .recettes-list {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin: 20px;
-        }
-
-        article {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 10px;
-            margin: 10px;
-            width: 30%;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-        }
-    </style>
+    <title>Nos Recettes - Maman Recette</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Recettes</h1>
-        <nav>
-            <ul>
-                <li><a href="accueil.html">Accueil</a></li>
-                <li><a href="recettes.html">Recettes</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <header role="banner">
+        <div class="nav-container">
+            <a href="accueil.html" aria-label="Retour à l'accueil">
+                <img src="mamanrecette.png" alt="Logo Maman Recette" class="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="accueil.html">Accueil</a></li>
+                    <li><a href="recettes.html" class="active">Recettes</a></li>
+                    <li><a href="categories.html">Catégories</a></li>
+                    <li><a href="conseils.html">Conseils</a></li>
+                    <li><a href="ingredients.html">Ingrédients</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <h2>Nos Recettes</h2>
-        <div class="recettes-list">
-            <article>
-                <h3>Recette 1: Soupe à la tomate</h3>
-                <img src="soupe-tomate.jpg" alt="Soupe à la tomate" />
-                <p>Ingrédients: Tomates, oignons, ail, basilic.</p>
-                <p>Préparation: Faites revenir les oignons et l'ail, ajoutez les tomates et laissez mijoter.</p>
+        <div class="recipes-header">
+            <h1>Nos Recettes</h1>
+            <div class="search-filters">
+                <div class="search-bar">
+                    <input type="search" placeholder="Rechercher une recette...">
+                    <button type="submit" aria-label="Rechercher">
+                        <span>🔍</span>
+                    </button>
+                </div>
+                <div class="filters">
+                    <button class="filter-button active" data-filter="all">Toutes</button>
+                    <button class="filter-button" data-filter="entrees">Entrées</button>
+                    <button class="filter-button" data-filter="plats">Plats</button>
+                    <button class="filter-button" data-filter="desserts">Desserts</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="advanced-filters">
+            <select name="temps">
+                <option value="">Temps de préparation</option>
+                <option value="15">- de 15 min</option>
+                <option value="30">- de 30 min</option>
+                <option value="60">- de 1h</option>
+            </select>
+            <select name="difficulte">
+                <option value="">Niveau de difficulté</option>
+                <option value="facile">Facile</option>
+                <option value="moyen">Moyen</option>
+                <option value="difficile">Difficile</option>
+            </select>
+            <select name="cout">
+                <option value="">Coût</option>
+                <option value="economique">Économique</option>
+                <option value="modere">Modéré</option>
+                <option value="eleve">Élevé</option>
+            </select>
+        </div>
+
+        <section class="recipes-grid">
+            <article class="recipe-card">
+                <div class="recipe-image">
+                    <img src="salade-cesar.jpg" alt="Salade César">
+                    <div class="recipe-tags">
+                        <span class="time-tag">20 min</span>
+                        <span class="difficulty-tag">Facile</span>
+                    </div>
+                    <button class="favorite-button" aria-label="Ajouter aux favoris">♥</button>
+                </div>
+                <div class="recipe-content">
+                    <h3>Salade César</h3>
+                    <div class="recipe-metadata">
+                        <span>👤 4 pers.</span>
+                        <span>⭐ 4.8/5</span>
+                        <span>💬 156 avis</span>
+                    </div>
+                    <p class="recipe-description">
+                        Une salade fraîche et croquante avec sa sauce crémeuse signature.
+                    </p>
+                    <div class="recipe-preview">
+                        <h4>Ingrédients principaux:</h4>
+                        <ul class="ingredients-list">
+                            <li>Laitue romaine</li>
+                            <li>Poulet grillé</li>
+                            <li>Parmesan</li>
+                        </ul>
+                    </div>
+                    <a href="detail.html?id=cesar" class="view-recipe-button">Voir la recette</a>
+                </div>
             </article>
-            <article>
-                <h3>Recette 2: Tarte aux pommes</h3>
-                <img src="tarte-pommes.jpg" alt="Tarte aux pommes" />
-                <p>Ingrédients: Pommes, sucre, pâte brisée.</p>
-                <p>Préparation: Étalez la pâte, disposez les pommes tranchées et enfournez.</p>
-            </article>
-            <article>
-                <h3>Recette 3: Salade César</h3>
-                <img src="salade-cesar.jpg" alt="Salade César" />
-                <p>Ingrédients: Laitue, croutons, poulet, parmesan, sauce César.</p>
-                <p>Préparation: Mélangez tous les ingrédients et servez frais.</p>
-            </article>
+            <!-- Autres recettes -->
+        </section>
+
+        <div class="pagination">
+            <button class="prev-page" disabled>←</button>
+            <div class="page-numbers">
+                <button class="active">1</button>
+                <button>2</button>
+                <button>3</button>
+                <span>...</span>
+                <button>12</button>
+            </div>
+            <button class="next-page">→</button>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2023 Maman Recette. Tous droits réservés.</p>
-        <p>Suivez-nous sur 
-            <a href="https://facebook.com" style="color: #ffcc00;">Facebook</a>, 
-            <a href="https://instagram.com" style="color: #ffcc00;">Instagram</a>
-        </p>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="MAMILLE.png" alt="Maman Recette" class="footer-logo">
+                <p>Des recettes familiales authentiques</p>
+            </div>
+            <div class="footer-links">
+                <a href="a-propos.html">À propos</a>
+                <a href="contact.html">Contact</a>
+                <a href="mentions-legales.html">Mentions légales</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                    <img src="facebook-icon.png" alt="Facebook" class="social-icon">
+                </a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                    <img src="instagram-icon.png" alt="Instagram" class="social-icon">
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2023 Maman Recette. Tous droits réservés.</p>
+        </div>
     </footer>
+    
 </body>
 </html>
+

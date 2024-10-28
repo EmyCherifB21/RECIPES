@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Détails de la recette Soupe à la tomate sur Maman Recette.">
+    <meta name="keywords" content="soupe, tomate, recette, Maman Recette">
+    <meta name="author" content="Maman Recette">
+    <title>Soupe à la tomate - Maman Recette</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="accueil.html" aria-label="Retour à l'accueil">
+            <img src="mamanrecette.png" class="logo" alt="Logo Maman Recette">
+        </a>
+        <h1>Soupe à la tomate</h1>
+        <nav>
+            <ul>
+                <li><a href="recettes.html">Recettes</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="recipe-detail">
+            <img src="soupe-tomate.jpg" alt="Soupe à la tomate">
+            <h2>Ingrédients</h2>
+            <ul>
+                <li>1 kg de tomates fraîches</li>
+                <li>1 oignon</li>
+                <li>2 gousses d'ail</li>
+                <li>Basilic frais</li>
+                <li>Huile d'olive</li>
+                <li>Sel et poivre</li>
+            </ul>
+            <h2>Préparation</h2>
+            <ol>
+                <li>Dans une casserole, faites revenir l'oignon et l'ail dans l'huile d'olive.</li>
+                <li>Ajoutez les tomates coupées et laissez mijoter pendant 30 minutes.</li>
+                <li>Mixez la soupe et assaisonnez avec le basilic, le sel et le poivre.</li>
+            </ol>
+            <h2>Conseils</h2>
+            <p>Servez chaud avec un peu de crème fraîche.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 Maman Recette. Tous droits réservés.</p>
+            <p>Suivez-nous sur 
+                <a href="https://facebook.com">Facebook</a>, 
+                <a href="https://instagram.com">Instagram</a>
+            </p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" onclick="scrollToTop()">↑</button>
+
+    <script>
+        window.onscroll = function() {
+            const backToTopButton = document.querySelector('.back-to-top');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>

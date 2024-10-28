@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails de la Recette - Maman Recette</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header role="banner">
+        <a href="accueil.html" aria-label="Retour à l'accueil"> 
+            <img src="mamanrecette.png" class="logo" alt="Logo Maman Recette">
+        </a>
+        <h1>Détails de la Recette</h1>
+        <nav role="navigation">
+            <ul>
+                <li><a href="accueil.html">Accueil</a></li>
+                <li><a href="recettes.html">Recettes</a></li>
+                <li><a href="categories.html">Catégories</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main role="main">
+        <section class="recipe-detail">
+            <h2 id="recipe-title">Salade César</h2>
+            <img src="salade-cesar.jpg" alt="Salade César" class="recipe-image">
+            <h3>Ingrédients</h3>
+            <ul class="ingredient-list">
+                <li>Laitue romaine</li>
+                <li>Croutons</li>
+                <li>Poulet grillé (en dés)</li>
+                <li>Parmesan râpé</li>
+                <li>Sauce César</li>
+                <li>Poivre noir (au goût)</li>
+            </ul>
+            <h3>Préparation</h3>
+            <ol class="preparation-steps">
+                <li>Dans un grand saladier, mélangez la laitue, le poulet, et les croutons.</li>
+                <li>Ajoutez la sauce César et mélangez jusqu'à ce que tout soit bien enrobé.</li>
+                <li>Parsemez de parmesan râpé et de poivre noir selon votre goût.</li>
+                <li>Servez immédiatement, accompagné de quartiers de citron si désiré.</li>
+            </ol>
+        </section>
+        
+        <section class="related-recipes">
+            <h3>Recettes Associées</h3>
+            <ul>
+                <li><a href="detail.html?id=pancakes">Pancakes</a></li>
+                <li><a href="detail.html?id=cookies">Cookies</a></li>
+                <li><a href="detail.html?id=pizza">Pizza</a></li>
+                <li><a href="detail.html?id=cheesecake">Cheesecake</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2023 Maman Recette. Tous droits réservés.</p>
+        <p>Suivez-nous sur 
+            <a href="https://facebook.com">Facebook</a>, 
+            <a href="https://instagram.com">Instagram</a>
+        </p>
+    </footer>
+
+    <button class="back-to-top" onclick="scrollToTop()">↑</button>
+
+    <script>
+        window.onscroll = function() {
+            const backToTopButton = document.querySelector('.back-to-top');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>
+

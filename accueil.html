@@ -1,146 +1,131 @@
+<!-- accueil.html -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maman Recette</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
-
-        header {
-            background-color: #ffcc00;
-            padding: 20px;
-            text-align: center;
-			   position: relative; 
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-
-        .hero {
-            text-align: center;
-            margin: 20px 0;
-        }
-		.hero h2 {
-
-            font-family: 'Roboto', sans-serif; 
-
-            font-weight: 700; 
-
-            font-size: 36px; 
-            margin: 20px 0; 
-
-        }
-
-        .recettes-list {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-
-        article {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 10px;
-            margin: 10px;
-            width: 30%;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-        }
-
-        .btn {
-            background-color: #ffcc00;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .btn:hover {
-            background-color: #e6b800;
-        }
-
-        .logo {
-		    position: absolute; 
-            top: 10px; 
-            left: 1px; 
-            width: 300px; 
-            height: 140px; 
-        }
-    </style>
+    <title>Maman Recette - Accueil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-	<a href="accueil.html"> 
-
-         <img src="MAMILLE.png.png" class="logo">
-        </a>
- 
-        <h1>Maman Recette</h1>
-        <nav>
-            <ul>
-                <li><a href="recettes.html">Recettes</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <header role="banner">
+        <div class="nav-container">
+            <a href="accueil.html" aria-label="Retour à l'accueil">
+                <img src="mamanrecette.png" alt="Logo Maman Recette" class="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="accueil.html" class="active">Accueil</a></li>
+                    <li><a href="recettes.html">Recettes</a></li>
+                    <li><a href="categories.html">Catégories</a></li>
+                    <li><a href="conseils.html">Conseils</a></li>
+                    <li><a href="ingredients.html">Ingrédients</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    
+
     <main>
         <section class="hero">
-            <img src="image-couverture.jpg" alt="Maman Recette" />
-            <h2>Bienvenue dans le monde des saveurs!</h2>
-            <button class="btn" onclick="showAlert()">Cliquez ici pour une surprise!</button>
+            <div class="hero-image">
+                <img src="image-couverture.jpg" alt="Délicieuses recettes maison">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1>Bienvenue dans le monde des saveurs!</h1>
+                    <p>Des recettes authentiques pour tous les jours</p>
+                    <a href="recettes.html" class="hero-button">Découvrir nos recettes</a>
+                </div>
+            </div>
         </section>
-        
-        <section id="recettes">
-            <h3>Recettes Populaires</h3>
-            <div class="recettes-list">
-                <article>
-                    <h4>Recette 1</h4>
-                    <img src="recette1.jpg" alt="Recette 1" />
-                    <p>Description de la recette 1.</p>
+
+        <section class="categories-preview">
+            <h2>Explorer par catégorie</h2>
+            <div class="categories-grid">
+                <a href="categories.html#entrees" class="category-card">
+                    <img src="entrees.jpg" alt="Entrées">
+                    <div class="category-overlay">
+                        <h3>Entrées</h3>
+                        <span>12 recettes</span>
+                    </div>
+                </a>
+                <a href="categories.html#plats" class="category-card">
+                    <img src="plats.jpg" alt="Plats">
+                    <div class="category-overlay">
+                        <h3>Plats</h3>
+                        <span>25 recettes</span>
+                    </div>
+                </a>
+                <a href="categories.html#desserts" class="category-card">
+                    <img src="desserts.jpg" alt="Desserts">
+                    <div class="category-overlay">
+                        <h3>Desserts</h3>
+                        <span>18 recettes</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="featured-recipes">
+            <h2>Recettes du moment</h2>
+            <div class="recipes-carousel">
+                <article class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="salade-cesar.jpg" alt="Salade César">
+                        <div class="recipe-badges">
+                            <span class="time">20 min</span>
+                            <span class="difficulty">Facile</span>
+                        </div>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Salade César</h3>
+                        <p>Une salade fraîche et croquante avec sa sauce crémeuse</p>
+                        <a href="detail.html?id=cesar" class="recipe-button">Voir la recette</a>
+                    </div>
                 </article>
-                <article>
-                    <h4>Recette 2</h4>
-                    <img src="recette2.jpg" alt="Recette 2" />
-                    <p>Description de la recette 2.</p>
-                </article>
-                
+                <!-- Autres recettes -->
+            </div>
+        </section>
+
+        <section class="tips-section">
+            <div class="tips-content">
+                <h2>Le conseil du chef</h2>
+                <div class="tip-card">
+                    <img src="conseil-chef.jpg" alt="Conseil du chef">
+                    <div class="tip-text">
+                        <p>Comment bien choisir ses fruits de saison ?</p>
+                        <a href="conseils.html" class="tip-button">Lire plus</a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-    
-    <footer>
-        <p>&copy; 2023 Maman Recette. Tous droits réservés.</p>
-        <p>Suivez-nous sur 
-            <a href="https://facebook.com" style="color: #ffcc00;">Facebook</a>, 
-            <a href="https://instagram.com" style="color: #ffcc00;">Instagram</a>
-        </p>
-    </footer>
 
-    <script>
-        function showAlert() {
-            alert("Merci de visiter Maman Recette! Profitez de nos délicieuses recettes!");
-        }
-    </script>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="MAMILLE.png" alt="Maman Recette" class="footer-logo">
+                <p>Des recettes familiales authentiques</p>
+            </div>
+            <div class="footer-links">
+                <a href="a-propos.html">À propos</a>
+                <a href="contact.html">Contact</a>
+                <a href="mentions-legales.html">Mentions légales</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                    <img src="facebook-icon.png" alt="Facebook" class="social-icon">
+                </a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                    <img src="instagram-icon.png" alt="Instagram" class="social-icon">
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2023 Maman Recette. Tous droits réservés.</p>
+        </div>
+    </footer>
+    
 </body>
 </html>

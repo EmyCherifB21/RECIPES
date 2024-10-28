@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catégories - Maman Recette</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header role="banner">
+        <div class="nav-container">
+            <a href="accueil.html" aria-label="Retour à l'accueil">
+                <img src="mamanrecette.png" alt="Logo Maman Recette" class="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="accueil.html" class="active">Accueil</a></li>
+                    <li><a href="recettes.html">Recettes</a></li>
+                    <li><a href="categories.html">Catégories</a></li>
+                    <li><a href="conseils.html">Conseils</a></li>
+                    <li><a href="ingredients.html">Ingrédients</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main role="main">
+        <section class="categories">
+            <h2>Nos Catégories de Recettes</h2>
+            <div class="category-grid">
+                <article class="category-card">
+                    <h3>Recettes Sucrées</h3>
+                    <p><a href="detail.html?id=pancakes">Pancakes</a></p>
+                    <p><a href="detail.html?id=cookies">Cookies</a></p>
+                    <p><a href="detail.html?id=cheesecake">Cheesecake</a></p>
+                </article>
+                <article class="category-card">
+                    <h3>Recettes Salées</h3>
+                    <p><a href="detail.html?id=cesar">Salade César</a></p>
+                    <p><a href="detail.html?id=pizza">Pizza</a></p>
+                </article>
+                <article class="category-card">
+                    <h3>Recettes Rapides</h3>
+                    <p>Recettes prêtes en moins de 30 minutes pour les repas express.</p>
+                    <a href="recettes.html#rapides" class="view-category">Voir les recettes rapides</a>
+                </article>
+                <article class="category-card">
+                    <h3>Recettes Saines</h3>
+                    <p>Recettes équilibrées pour un mode de vie sain.</p>
+                    <a href="recettes.html#saines" class="view-category">Voir les recettes saines</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="MAMILLE.png" alt="Maman Recette" class="footer-logo">
+                <p>Des recettes familiales authentiques</p>
+            </div>
+            <div class="footer-links">
+                <h4>Liens Utiles</h4>
+                <ul>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="mentions-legales.html">Mentions légales</a></li>
+                </ul>
+            </div>
+            <div class="social-links">
+                <h4>Suivez-nous</h4>
+                <a href="https://facebook.com">Facebook</a>
+                <a href="https://instagram.com">Instagram</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2023 Maman Recette. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" onclick="scrollToTop()">↑</button>
+
+    <script>
+        window.onscroll = function() {
+            const backToTopButton = document.querySelector('.back-to-top');
+            backToTopButton.style.display = document.documentElement.scrollTop > 20 ? "block" : "none";
+        };
+
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>
